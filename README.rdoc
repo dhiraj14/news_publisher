@@ -1,5 +1,11 @@
 News Publisher
 
 ===============================================
+Basic Instruction to run the application to download the files and extract and publish news information.
 
+There is a rake file called publish.rake with a task
+zip_files_import: post_content which needs to be executed to download the zip files from "http://feed.omgili.com/5Rh5AMTrc4Pv/mainstream/posts/" to tmp/ folder.
+It does a find_or_create for files to check if they exist.
+If not, the file gets downloaded and extracted to tmp/posts/ folder.
 
+After extraction, the contents of the extracted file gets published to NEWS_XML list.
